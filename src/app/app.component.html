@@ -1,0 +1,14 @@
+
+<!--The content below is only a placeholder and can be replaced.-->  
+<div class="bg-primary" style="text-align:center;color: #fff">  
+  <h2 class="navbar-brand ">  
+     {{ 'title' | translate }}  
+  </h2>  
+  <h1>{{ 'Home' | translate }}</h1>
+  <select #langSelect (change)="changeLang(langSelect.value)">  
+      <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>  
+  </select>  
+</div>
+
+<button class="btn btn-success" [routerLink]="['/add']">Create Meeting</button>
+<router-outlet></router-outlet>

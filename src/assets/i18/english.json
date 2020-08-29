@@ -1,0 +1,11 @@
+
+{   
+    "title" :" Welcome to MultilanguageApp!",
+    "Heading": "Meeting Details",  
+    "Name": "Full Name",  
+    "Date": "Meeting Date",  
+    "StartTime": "Meeting Start Time",
+    "End Time": "Meeting End Time",   
+    "Submit": "Submit", 
+    "Home": "English"   
+}
