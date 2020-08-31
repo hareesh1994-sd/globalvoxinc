@@ -1,13 +1,14 @@
 
 <!--The content below is only a placeholder and can be replaced.-->  
-<div class="bg-primary" style="text-align:center;color: #fff">  
-  <h2 class="navbar-brand ">  
-     {{ 'title' | translate }}  
-  </h2>  
-  <h1>{{ 'Home' | translate }}</h1>
-  <select #langSelect (change)="changeLang(langSelect.value)">  
-      <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>  
-  </select>  
+<div class="bg-primary dropdown height " style="color: #fff"  >  
+  <div class="dropdown ">
+    <button class="btn btn-secondary dropdown-toggle margin" type="button" id="dropdownMenuButton" data-toggle="dropdown">
+      {{selectedLanguage.display}}
+    </button>
+    <div class="dropdown-menu " aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item" href="javascript:void" *ngFor="let lang of languagesList" (click)="changeLang(lang)">{{lang.display}}</a>
+    </div>
+  </div>
 </div>
 
 <router-outlet></router-outlet>

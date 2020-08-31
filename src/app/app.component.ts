@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';  
+import { Component, OnDestroy, OnInit } from '@angular/core';  
 import { TranslateService } from '@ngx-translate/core';  
 import { Router } from '@angular/router';
 
@@ -7,13 +7,14 @@ import { Router } from '@angular/router';
   templateUrl: './app.component.html',  
   styleUrls: ['./app.component.scss']  
 })  
-export class AppComponent {
-  [x: string]: any;  
+export class AppComponent implements OnInit {
+  languagesList = [{display: "English", code: "english"}, {display: "Hindi", code: "hindi"}];
+  selectedLanguage = {display: "English", code: "english"};
   
   // title = 'में आपका स्वागत है!';
   constructor(
     private router: Router,
-    public translate: TranslateService) {  
+    public translate: TranslateService) {
     translate.addLangs(['english', 'hindi']);  
     if (sessionStorage.getItem('locale')) {  
       const browserLang = sessionStorage.getItem('locale');  
@@ -22,9 +23,19 @@ export class AppComponent {
       sessionStorage.setItem('locale', 'english');  
       translate.setDefaultLang('english'); 
     }  
-  }  
-  changeLang(language: string) {  
-    sessionStorage.setItem('locale', language);  
-    this.translate.use(language);
+  }
+
+  ngOnInit() {
+    this.setDefaultLang();
+  }
+
+  setDefaultLang() {
+    sessionStorage.setItem('locale', this.selectedLanguage.code);  
+    this.translate.use(this.selectedLanguage.code);
+  }
+
+  changeLang(selectedLang: any) { 
+    this.selectedLanguage = selectedLang;
+    this.setDefaultLang();
   }   
 }
