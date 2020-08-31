@@ -1,37 +1,24 @@
 <!-- <p>meeting-list works!</p> -->
 
-<button class="btn btn-success" [routerLink]="['/add']">{{ 'CreatingMeeting' | translate }}</button>
+<button class="btn btn-success" [routerLink]="['/add']">{{ 'CREATEMEETING' | translate }}</button>
 <table class="table">
     <thead>
       <tr>
-        <th scope="col">{{ 'S.no' | translate }}</th>
-        <th scope="col">{{ 'Name' | translate }}</th>
-        <th scope="col">{{ 'Date' | translate }}</th>
-        <th scope="col">{{ 'StartTime' | translate }}</th>
-        <th scope="col">{{ 'End Time' | translate }}</th>
+        <th scope="col">{{ 'SLNO' | translate }}</th>
+        <th scope="col">{{ 'NAME' | translate }}</th>
+        <th scope="col">{{ 'DATE' | translate }}</th>
+        <th scope="col">{{ 'SARTTIME' | translate }}</th>
+        <th scope="col">{{ 'ENDTIME' | translate }}</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-        <td>@mdo</td>
+      <tr *ngFor="let rec of meetindList; let i = index">
+        <th scope="row">{{i}}</th>
+        <td>{{rec.name}}</td>
+        <td>{{rec.date}}</td>
+        <td>{{rec.Starttime}}</td>
+        <td>{{rec.endtime}}</td>
       </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Larry</td>
-        <td>the Bird</td>
-        <td>@twitter</td>
-        <td>@twitter</td>
-      </tr>
+      <tr *ngIf="!meetindList">No Records Found!</tr>
     </tbody>
   </table>

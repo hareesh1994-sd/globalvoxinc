@@ -1,13 +1,11 @@
 
 {   
-    "title" :" Welcome to MultilanguageApp!",
-    " CreatingMeeting": " Create Meeting",
-    "Heading": "Meeting Details",  
-    "Name": "Full Name",  
-    "Date": "Meeting Date",  
-    "StartTime": "Meeting Start Time",
-    "End Time": "Meeting End Time",   
-    "Submit": "Submit", 
-    "Home": "English",
-    "S.no": "S.No"  
+    "CREATEMEETING": " Create Meeting",
+    "HEADING": "Meeting Details",  
+    "NAME": "Full Name",  
+    "DATE": "Meeting Date",  
+    "SARTTIME": "Meeting Start Time",
+    "ENDTIME": "Meeting End Time",   
+    "SUBMIT": "Submit",
+    "SLNO": "S.No"  
 }
