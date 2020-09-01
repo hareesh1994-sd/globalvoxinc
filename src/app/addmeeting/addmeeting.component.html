@@ -1,29 +1,33 @@
 <!-- <p>addmeeting works!</p>
 <h1>sdhsjkdh</h1> -->
 <div class="card">
-  <h5 class="card-header">{{ 'Heading' | translate }} </h5>
+  <h5 class="card-header">{{ 'HEADING' | translate }} </h5>
   <div class="card-body">
     <form #f="ngForm" class="col-md-12" novalidate> 
     <div class="form-group">
-      <label>{{ 'Name' | translate }} </label>
+      <label>{{ 'NAME' | translate }} </label>
       <input type="text" class="form-control" id="fullname" name="name" ngModel>
     </div>
     <div class="form-group">
-      <label>{{ 'Date' | translate }}</label>
+      <label>{{ 'DATE' | translate }}</label>
       <input type="date" class="form-control" id="meeting-date" name="date" ngModel>
     </div>
     <div class="form-group">
-        <label>{{ 'StartTime' | translate }}</label>
+        <label>{{ 'SARTTIME' | translate }}</label>
         <input type="time" class="form-control" id="meetingstart-time" name="Starttime" ngModel>
     </div>
     <div class="form-group">
-        <label>{{ 'End Time' | translate }}</label>
+        <label>{{ 'ENDTIME' | translate }}</label>
         <input type="time" class="form-control" id="meetingend-time" name="endtime" ngModel>
     </div>
+    <div class="form-group">
+      <label>{{ 'SUBJECT' | translate }}</label>
+      <input type="text" class="form-control" id="meeting-subject" name="subject" ngModel>
+  </div>
     </form>
   </div>
     <div class="card-footer">
-      <button   (click)="onSubmit(f)" type="submit" class=" btn-primary meeting-btn">{{ 'Submit' | translate }}</button>
+      <button   (click)="onSubmit(f)" type="submit" class=" btn-primary meeting-btn">{{ 'SUBMIT' | translate }}</button>
     </div>
 </div>
 

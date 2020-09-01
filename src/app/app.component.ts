@@ -10,8 +10,10 @@ import { Router } from '@angular/router';
 export class AppComponent implements OnInit {
   languagesList = [{display: "English", code: "english"}, {display: "Hindi", code: "hindi"}];
   selectedLanguage = {display: "English", code: "english"};
+   user:any = {};
+   placeholderString = 'Select timezone';
   
-  // title = 'में आपका स्वागत है!';
+
   constructor(
     private router: Router,
     public translate: TranslateService) {
@@ -23,6 +25,9 @@ export class AppComponent implements OnInit {
       sessionStorage.setItem('locale', 'english');  
       translate.setDefaultLang('english'); 
     }  
+  }
+  changeTimezone(timezone) {
+  this.user.timezone = timezone;
   }
 
   ngOnInit() {
