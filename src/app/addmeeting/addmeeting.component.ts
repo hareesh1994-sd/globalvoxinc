@@ -32,7 +32,6 @@ export class AddmeetingComponent implements OnInit {
       form.value.Starttime  = this.appendMeridian(form.value.Starttime);
       form.value.endtime  = this.appendMeridian(form.value.endtime);
       existingMeetings.splice(0, 0, form.value);
-      existingMeetings.push(form.value);
     } else {
       existingMeetings.push(form.value);
     }
