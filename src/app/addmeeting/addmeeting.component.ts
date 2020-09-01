@@ -16,7 +16,7 @@ export class AddmeetingComponent implements OnInit {
       private localService: LocalService) { }
 
   onSubmit(form: any): void {
-    if (!form.value.name || !form.value.date || !form.value.Starttime || !form.value.endtime || !form.value.subject ) {
+    if (!form.value.name || !form.value.date || !form.value.Starttime || !form.value.endtime) {
       alert('Please Enter the all the fields');
       return ;
     }

@@ -9,7 +9,6 @@
         <th scope="col">{{ 'DATE' | translate }}</th>
         <th scope="col">{{ 'SARTTIME' | translate }}</th>
         <th scope="col">{{ 'ENDTIME' | translate }}</th>
-        <th scope="col">{{ 'SUBJECT' | translate }}</th>
       </tr>
     </thead>
     <tbody>
@@ -19,7 +18,6 @@
         <td>{{rec.date}}</td>
         <td>{{rec.Starttime}}</td>
         <td>{{rec.endtime}}</td>
-        <td>{{rec.subject}}</td>
       </tr>
       <tr *ngIf="!meetindList">No Records Found!</tr>
     </tbody>
